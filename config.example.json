@@ -1,6 +1,6 @@
 {
   "token": "",
-  "path": "/Users/mmorozov/Documents/git_backup",
+  "path": "/var/git_backup",
   "fork": true,
   "private": true,
   "public": true,
