@@ -5,8 +5,8 @@ import (
 	"os/exec"
 )
 
+//for future
 type GitCmd struct {
-
 }
 
 func (g *GitCmd) Clone(url string, destination string) error {
@@ -41,7 +41,7 @@ func (g *GitCmd) Update(destination string) error {
 	return nil
 }
 
-func (g *GitCmd) runCommand(dir string, args... string) error {
+func (g *GitCmd) runCommand(dir string, args ...string) error {
 	cmd := exec.Command("git", args...)
 	cmd.Dir = dir
 	return cmd.Run()
