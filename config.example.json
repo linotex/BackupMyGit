@@ -1,0 +1,13 @@
+{
+  "token": "",
+  "path": "/Users/mmorozov/Documents/git_backup",
+  "fork": true,
+  "private": true,
+  "public": true,
+  "archived": true,
+  "disabled": true,
+  "excludes": [
+    "user/test1",
+    "user/test2"
+  ]
+}
