@@ -8,27 +8,27 @@ import (
 )
 
 type Config struct {
-	Token		string		`json:"token"`
-	Path		string		`json:"path"`
-	Fork		bool		`json:"fork"`
-	Private		bool		`json:"private"`
-	Public		bool		`json:"public"`
-	Archived	bool		`json:"archived"`
-	Disabled	bool		`json:"disabled"`
-	Excludes	[]string	`json:"excludes"`
-	excludesMap	map[string]bool
+	Token       string   `json:"token"`
+	Path        string   `json:"path"`
+	Fork        bool     `json:"fork"`
+	Private     bool     `json:"private"`
+	Public      bool     `json:"public"`
+	Archived    bool     `json:"archived"`
+	Disabled    bool     `json:"disabled"`
+	Excludes    []string `json:"excludes"`
+	excludesMap map[string]bool
 }
 
 func LoadConfig() Config {
 
 	config := Config{
-		Path:		"/var/git_backup",
-		Fork:		true,
-		Private:	true,
-		Public:		true,
-		Archived:	true,
-		Disabled:	true,
-		Excludes:	[]string{},
+		Path:     "/var/git_backup",
+		Fork:     true,
+		Private:  true,
+		Public:   true,
+		Archived: true,
+		Disabled: true,
+		Excludes: []string{},
 	}
 
 	jsonFile, err := os.Open("config.json")

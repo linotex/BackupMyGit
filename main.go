@@ -63,8 +63,7 @@ func getRepoList(cfg config.Config) []api.Repo {
 	log.Println("Found", len(repoList), "repos")
 
 	for _, repo := range repoList {
-		if
-			(!cfg.Fork && repo.Fork) ||
+		if (!cfg.Fork && repo.Fork) ||
 			(!cfg.Private && repo.Private) ||
 			(!cfg.Public && !repo.Private) ||
 			(!cfg.Archived && repo.Archived) ||
@@ -78,7 +77,7 @@ func getRepoList(cfg config.Config) []api.Repo {
 
 	log.Println("Processing", len(filterRepos), "repos")
 
-	return  filterRepos
+	return filterRepos
 }
 
 func createPath(path string, skipError bool) (bool, error) {
