@@ -32,11 +32,11 @@ func (g *GitCmd) Clone(url string, destination string) error {
 
 func (g *GitCmd) Update(destination string) error {
 
-	err := g.runCommand(destination, "pull")
-	if err != nil {
-		log.Println("Cannot update repo")
-		return err
-	}
+	_ = g.runCommand(destination, "pull")
+	//if err != nil {
+	//	log.Println("Cannot update repo")
+	//	return err
+	//}
 
 	return nil
 }
