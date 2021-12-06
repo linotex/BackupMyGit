@@ -4,12 +4,24 @@ import (
 	"BackupMyGit/api"
 	"BackupMyGit/cmd"
 	"BackupMyGit/config"
+	"flag"
 	"fmt"
 	"log"
 	"os"
 )
 
+const Version = "0.1"
+
 func main() {
+
+	version := flag.Bool("v", false, "Version of tool")
+	flag.Parse()
+
+	if *version {
+		fmt.Println(Version)
+		return
+	}
+
 	cfg := config.LoadConfig()
 
 	repoList := getRepoList(cfg)
